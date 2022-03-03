@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\52826143832.INFOSCS\\source\\repos\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj": {}
+    "C:\\Users\\47429258824.INFOSCS\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\52826143832.INFOSCS\\source\\repos\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj": {
+    "C:\\Users\\47429258824.INFOSCS\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\52826143832.INFOSCS\\source\\repos\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
+        "projectUniqueName": "C:\\Users\\47429258824.INFOSCS\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
         "projectName": "move_ofertas.webAPI",
-        "projectPath": "C:\\Users\\52826143832.INFOSCS\\source\\repos\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
-        "packagesPath": "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\52826143832.INFOSCS\\source\\repos\\move_ofertas.webAPI\\move_ofertas.webAPI\\obj\\",
+        "projectPath": "C:\\Users\\47429258824.INFOSCS\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
+        "packagesPath": "C:\\Users\\47429258824.INFOSCS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\47429258824.INFOSCS\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\52826143832.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\47429258824.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
