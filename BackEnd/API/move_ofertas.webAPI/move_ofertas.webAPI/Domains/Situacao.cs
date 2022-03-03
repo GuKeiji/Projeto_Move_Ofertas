@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+
+#nullable disable
+
+namespace move_ofertas.webAPI.Domains
+{
+    public partial class Situacao
+    {
+        public Situacao()
+        {
+            Reservas = new HashSet<Reserva>();
+        }
+
+        public byte IdSituacao { get; set; }
+        public string NomeSituação { get; set; }
+
+        public virtual ICollection<Reserva> Reservas { get; set; }
+    }
+}
