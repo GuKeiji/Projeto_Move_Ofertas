@@ -1,4 +1,5 @@
-﻿using move_ofertas.webAPI.Domains;
+﻿using move_ofertas.webAPI.Contexts;
+using move_ofertas.webAPI.Domains;
 using move_ofertas.webAPI.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,29 +10,50 @@ namespace move_ofertas.webAPI.Repositories
 {
     public class EmpresaRepository : IEmpresaRepository
     {
+        MoveOfertasContext ctx = new MoveOfertasContext();
+
         public void Atualizar(int id, Empresa empresaAtualizada)
         {
-            throw new NotImplementedException();
+            Empresa empresaBuscada = BuscarPorId(id);
+
+            if (empresaBuscada.NomeEmpresa != null)
+            {
+                empresaBuscada.NomeEmpresa = empresaAtualizada.NomeEmpresa;
+                empresaBuscada.RazaoSocial = empresaAtualizada.RazaoSocial;
+                empresaBuscada.Endereco = empresaAtualizada.Endereco;
+                empresaBuscada.Cnpj = empresaAtualizada.Cnpj;
+                empresaBuscada.Telefone = empresaAtualizada.Telefone;
+            }
+
+            ctx.Empresas.Update(empresaBuscada);
+
+            ctx.SaveChanges();
         }
 
         public Empresa BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            return ctx.Empresas.FirstOrDefault(e => e.IdEmpresa == id);
         }
 
         public void Cadastrar(Empresa novaEmpresa)
         {
-            throw new NotImplementedException();
+            ctx.Empresas.Add(novaEmpresa);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            Empresa empresaBuscada = BuscarPorId(id);
+
+            ctx.Empresas.Remove(empresaBuscada);
+
+            ctx.SaveChanges();
         }
 
         public List<Empresa> ListarTodos()
         {
-            throw new NotImplementedException();
+            return ctx.Empresas.ToList();
         }
     }
 }
