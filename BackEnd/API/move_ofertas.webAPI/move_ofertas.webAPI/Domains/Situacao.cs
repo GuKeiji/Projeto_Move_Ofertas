@@ -14,7 +14,7 @@ namespace move_ofertas.webAPI.Domains
         }
 
         public byte IdSituacao { get; set; }
-        public string NomeSituação { get; set; }
+        public string NomeSituacao { get; set; }
 
         public virtual ICollection<Ofertum> Oferta { get; set; }
         public virtual ICollection<Reserva> Reservas { get; set; }
