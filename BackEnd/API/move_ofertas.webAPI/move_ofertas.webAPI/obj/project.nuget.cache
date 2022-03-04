@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "KoBpQZer8ZO7HVkawTAUAE7wna9q/cgIVN33WhcOwrtBupwa/q0d3C/7kesw/ushEMXVg4847qgotN+NIrfqTw==",
+  "dgSpecHash": "j1eEw+25x/flq9NAyCuYbfxY0M/Y7GdfAXBCCuFhmaK92Qz3WMIOO6PYTY8L2oW78FcZrJ0gpdfemHPvd6atGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\52826143832.INFOSCS\\Desktop\\Projeto_MOVENOVO\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.14\\microsoft.aspnetcore.authentication.jwtbearer.5.0.14.nupkg.sha512",
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.14\\microsoft.aspnetcore.jsonpatch.5.0.14.nupkg.sha512",
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.14\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.14.nupkg.sha512",
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -32,8 +33,8 @@
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.identity.client\\4.14.0\\microsoft.identity.client.4.14.0.nupkg.sha512",
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.16.0\\microsoft.identitymodel.jsonwebtokens.6.16.0.nupkg.sha512",
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.identitymodel.logging\\6.16.0\\microsoft.identitymodel.logging.6.16.0.nupkg.sha512",
-    "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.identitymodel.protocols\\5.6.0\\microsoft.identitymodel.protocols.5.6.0.nupkg.sha512",
-    "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\5.6.0\\microsoft.identitymodel.protocols.openidconnect.5.6.0.nupkg.sha512",
+    "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
+    "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.16.0\\microsoft.identitymodel.tokens.6.16.0.nupkg.sha512",
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
@@ -150,5 +151,12 @@
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\52826143832.INFOSCS\\Desktop\\Projeto_MOVENOVO\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
