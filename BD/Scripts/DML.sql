@@ -32,10 +32,10 @@ VALUES ('3','José','123211234','Alameda Barão de Limeira, 539 - Santa Cecilia, S
 	   ('4','Adriana','877655679','R. Vitorino Carmilo, 290-382 - Barra Funda','98712363598','11987654567','02/07/2000');
 GO
 
-INSERT INTO OFERTA(idCategoria,idEmpresa,nomeProduto,valor,quantidade,dataFabricacao,dataValidade,situacaoOferta,imagem,descricao)
-VALUES ('8','1','Ração','20.00','10','01/01/2022','28/02/2022','Ativo','Ração_Seca_Pedigree_para_Cães_Adultos_Raças_Pequenas_3104845.jpg','Ração de qualidade'),
-	   ('4','2','Camiseta','50.00','20','02/01/2022','','Ativo','D14-5695-028_zoom1.jpg','Tamanho P'),
-	   ('4','2','Tênis','100.00','15','01/01/2022','','Ativo','558123239.jpg','Número 41');
+INSERT INTO OFERTA(idCategoria,idEmpresa,idSituacao,nomeProduto,valor,quantidade,dataFabricacao,dataValidade,descricao)
+VALUES ('8','1','1','Ração','20.00','10','01/01/2022','28/02/2022','Ração de qualidade'),
+	   ('4','2','1','Camiseta','50.00','20','02/01/2022','','Tamanho P'),
+	   ('4','2','1','Tênis','100.00','15','01/01/2022','','Número 41');
 GO
 
 INSERT INTO RESERVA(idCliente,idSituacao,idOferta,dataReserva)
