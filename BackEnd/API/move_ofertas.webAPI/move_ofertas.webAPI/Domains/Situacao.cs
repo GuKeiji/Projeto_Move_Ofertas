@@ -9,12 +9,14 @@ namespace move_ofertas.webAPI.Domains
     {
         public Situacao()
         {
+            Oferta = new HashSet<Ofertum>();
             Reservas = new HashSet<Reserva>();
         }
 
         public byte IdSituacao { get; set; }
         public string NomeSituação { get; set; }
 
+        public virtual ICollection<Ofertum> Oferta { get; set; }
         public virtual ICollection<Reserva> Reservas { get; set; }
     }
 }

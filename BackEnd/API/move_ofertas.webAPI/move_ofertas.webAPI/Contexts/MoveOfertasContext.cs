@@ -21,6 +21,7 @@ namespace move_ofertas.webAPI.Contexts
         public virtual DbSet<Categorium> Categoria { get; set; }
         public virtual DbSet<Cliente> Clientes { get; set; }
         public virtual DbSet<Empresa> Empresas { get; set; }
+        public virtual DbSet<Imagemofertum> Imagemoferta { get; set; }
         public virtual DbSet<Ofertum> Oferta { get; set; }
         public virtual DbSet<Reserva> Reservas { get; set; }
         public virtual DbSet<Situacao> Situacaos { get; set; }
@@ -31,8 +32,8 @@ namespace move_ofertas.webAPI.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //optionsBuilder.UseSqlServer("Data Source=NOTE0113E1\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=Senai@132;");
-                optionsBuilder.UseSqlServer("Data Source=NOTE0113F2\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=Senai@132;");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Data Source=PC-GAMER-GUKEIJ\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=senai@132;");
             }
         }
 
@@ -43,11 +44,11 @@ namespace move_ofertas.webAPI.Contexts
             modelBuilder.Entity<Categorium>(entity =>
             {
                 entity.HasKey(e => e.IdCategoria)
-                    .HasName("PK__CATEGORI__8A3D240C3720411A");
+                    .HasName("PK__CATEGORI__8A3D240C4A11CB6F");
 
                 entity.ToTable("CATEGORIA");
 
-                entity.HasIndex(e => e.NomeCategoria, "UQ__CATEGORI__8FC1D737E7BD24C7")
+                entity.HasIndex(e => e.NomeCategoria, "UQ__CATEGORI__8FC1D737A5D787C6")
                     .IsUnique();
 
                 entity.Property(e => e.IdCategoria).HasColumnName("idCategoria");
@@ -62,20 +63,20 @@ namespace move_ofertas.webAPI.Contexts
             modelBuilder.Entity<Cliente>(entity =>
             {
                 entity.HasKey(e => e.IdCliente)
-                    .HasName("PK__CLIENTE__885457EE826ACA45");
+                    .HasName("PK__CLIENTE__885457EE804CE056");
 
                 entity.ToTable("CLIENTE");
 
-                entity.HasIndex(e => e.Rg, "UQ__CLIENTE__321537C880FA092F")
+                entity.HasIndex(e => e.Rg, "UQ__CLIENTE__321537C8FAB676DE")
                     .IsUnique();
 
-                entity.HasIndex(e => e.NomeCliente, "UQ__CLIENTE__8182EFAED8C26DFA")
+                entity.HasIndex(e => e.NomeCliente, "UQ__CLIENTE__8182EFAEC70EAC9D")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Endereco, "UQ__CLIENTE__9456D406D3614EC2")
+                entity.HasIndex(e => e.Endereco, "UQ__CLIENTE__9456D406F6F6F625")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Cpf, "UQ__CLIENTE__C1F89731F0CCBCA4")
+                entity.HasIndex(e => e.Cpf, "UQ__CLIENTE__C1F897316D3A88F0")
                     .IsUnique();
 
                 entity.Property(e => e.IdCliente).HasColumnName("idCliente");
@@ -126,23 +127,23 @@ namespace move_ofertas.webAPI.Contexts
             modelBuilder.Entity<Empresa>(entity =>
             {
                 entity.HasKey(e => e.IdEmpresa)
-                    .HasName("PK__EMPRESA__75D2CED45CE8511F");
+                    .HasName("PK__EMPRESA__75D2CED491A275EC");
 
                 entity.ToTable("EMPRESA");
 
-                entity.HasIndex(e => e.Telefone, "UQ__EMPRESA__2A16D97F6B995B85")
+                entity.HasIndex(e => e.Telefone, "UQ__EMPRESA__2A16D97F27206F1D")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Endereco, "UQ__EMPRESA__9456D4061C41F3CD")
+                entity.HasIndex(e => e.Endereco, "UQ__EMPRESA__9456D40650965E58")
                     .IsUnique();
 
-                entity.HasIndex(e => e.RazaoSocial, "UQ__EMPRESA__9BF93A30AE3C2337")
+                entity.HasIndex(e => e.RazaoSocial, "UQ__EMPRESA__9BF93A30A19150B4")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Cnpj, "UQ__EMPRESA__AA57D6B4355001D0")
+                entity.HasIndex(e => e.Cnpj, "UQ__EMPRESA__AA57D6B4E88D7D78")
                     .IsUnique();
 
-                entity.HasIndex(e => e.NomeEmpresa, "UQ__EMPRESA__D79C088825823D3F")
+                entity.HasIndex(e => e.NomeEmpresa, "UQ__EMPRESA__D79C08880ACD2724")
                     .IsUnique();
 
                 entity.Property(e => e.IdEmpresa).HasColumnName("idEmpresa");
@@ -186,10 +187,49 @@ namespace move_ofertas.webAPI.Contexts
                     .HasConstraintName("FK__EMPRESA__idUsuar__46E78A0C");
             });
 
+            modelBuilder.Entity<Imagemofertum>(entity =>
+            {
+                entity.ToTable("IMAGEMOFERTA");
+
+                entity.HasIndex(e => e.IdOferta, "UQ__IMAGEMOF__05A1245FB86FB57F")
+                    .IsUnique();
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.Binario)
+                    .IsRequired()
+                    .HasColumnName("binario");
+
+                entity.Property(e => e.DataInclusao)
+                    .HasColumnType("datetime")
+                    .HasColumnName("data_inclusao")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.IdOferta).HasColumnName("idOferta");
+
+                entity.Property(e => e.MimeType)
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("mimeType");
+
+                entity.Property(e => e.NomeArquivo)
+                    .IsRequired()
+                    .HasMaxLength(250)
+                    .IsUnicode(false)
+                    .HasColumnName("nomeArquivo");
+
+                entity.HasOne(d => d.IdOfertaNavigation)
+                    .WithOne(p => p.Imagemofertum)
+                    .HasForeignKey<Imagemofertum>(d => d.IdOferta)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__IMAGEMOFE__idOfe__5AEE82B9");
+            });
+
             modelBuilder.Entity<Ofertum>(entity =>
             {
                 entity.HasKey(e => e.IdOferta)
-                    .HasName("PK__OFERTA__05A1245EC0AB0F5D");
+                    .HasName("PK__OFERTA__05A1245E4484B7CE");
 
                 entity.ToTable("OFERTA");
 
@@ -213,11 +253,7 @@ namespace move_ofertas.webAPI.Contexts
 
                 entity.Property(e => e.IdEmpresa).HasColumnName("idEmpresa");
 
-                entity.Property(e => e.Imagem)
-                    .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false)
-                    .HasColumnName("imagem");
+                entity.Property(e => e.IdSituacao).HasColumnName("idSituacao");
 
                 entity.Property(e => e.NomeProduto)
                     .IsRequired()
@@ -230,12 +266,6 @@ namespace move_ofertas.webAPI.Contexts
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("quantidade");
-
-                entity.Property(e => e.SituacaoOferta)
-                    .IsRequired()
-                    .HasMaxLength(40)
-                    .IsUnicode(false)
-                    .HasColumnName("situacaoOferta");
 
                 entity.Property(e => e.Valor)
                     .HasColumnType("money")
@@ -250,12 +280,17 @@ namespace move_ofertas.webAPI.Contexts
                     .WithMany(p => p.Oferta)
                     .HasForeignKey(d => d.IdEmpresa)
                     .HasConstraintName("FK__OFERTA__idEmpres__5165187F");
+
+                entity.HasOne(d => d.IdSituacaoNavigation)
+                    .WithMany(p => p.Oferta)
+                    .HasForeignKey(d => d.IdSituacao)
+                    .HasConstraintName("FK__OFERTA__idSituac__52593CB8");
             });
 
             modelBuilder.Entity<Reserva>(entity =>
             {
                 entity.HasKey(e => e.IdReserva)
-                    .HasName("PK__RESERVA__94D104C89C1D87D9");
+                    .HasName("PK__RESERVA__94D104C876578430");
 
                 entity.ToTable("RESERVA");
 
@@ -274,27 +309,27 @@ namespace move_ofertas.webAPI.Contexts
                 entity.HasOne(d => d.IdClienteNavigation)
                     .WithMany(p => p.Reservas)
                     .HasForeignKey(d => d.IdCliente)
-                    .HasConstraintName("FK__RESERVA__idClien__5441852A");
+                    .HasConstraintName("FK__RESERVA__idClien__5535A963");
 
                 entity.HasOne(d => d.IdOfertaNavigation)
                     .WithMany(p => p.Reservas)
                     .HasForeignKey(d => d.IdOferta)
-                    .HasConstraintName("FK__RESERVA__idOfert__5629CD9C");
+                    .HasConstraintName("FK__RESERVA__idOfert__571DF1D5");
 
                 entity.HasOne(d => d.IdSituacaoNavigation)
                     .WithMany(p => p.Reservas)
                     .HasForeignKey(d => d.IdSituacao)
-                    .HasConstraintName("FK__RESERVA__idSitua__5535A963");
+                    .HasConstraintName("FK__RESERVA__idSitua__5629CD9C");
             });
 
             modelBuilder.Entity<Situacao>(entity =>
             {
                 entity.HasKey(e => e.IdSituacao)
-                    .HasName("PK__SITUACAO__12AFD197F6B3BF98");
+                    .HasName("PK__SITUACAO__12AFD197D2436FA4");
 
                 entity.ToTable("SITUACAO");
 
-                entity.HasIndex(e => e.NomeSituação, "UQ__SITUACAO__557603FFF98B50EE")
+                entity.HasIndex(e => e.NomeSituação, "UQ__SITUACAO__557603FFC4D12B7D")
                     .IsUnique();
 
                 entity.Property(e => e.IdSituacao)
@@ -311,11 +346,11 @@ namespace move_ofertas.webAPI.Contexts
             modelBuilder.Entity<Tipousuario>(entity =>
             {
                 entity.HasKey(e => e.IdTipoUsuario)
-                    .HasName("PK__TIPOUSUA__03006BFF13B03388");
+                    .HasName("PK__TIPOUSUA__03006BFF2D651F30");
 
                 entity.ToTable("TIPOUSUARIO");
 
-                entity.HasIndex(e => e.NomeTipoUsuario, "UQ__TIPOUSUA__A017BD9F72C8EB4A")
+                entity.HasIndex(e => e.NomeTipoUsuario, "UQ__TIPOUSUA__A017BD9F6AB849FA")
                     .IsUnique();
 
                 entity.Property(e => e.IdTipoUsuario)
@@ -332,7 +367,7 @@ namespace move_ofertas.webAPI.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__USUARIO__645723A619B9C318");
+                    .HasName("PK__USUARIO__645723A63E1A0424");
 
                 entity.ToTable("USUARIO");
 
