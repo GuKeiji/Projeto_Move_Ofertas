@@ -32,8 +32,7 @@ namespace move_ofertas.webAPI.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=PC-GAMER-GUKEIJ\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=senai@132;");
+                optionsBuilder.UseSqlServer("Data Source=NOTE0113E1\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=Senai@132;");
             }
         }
 
@@ -329,14 +328,14 @@ namespace move_ofertas.webAPI.Contexts
 
                 entity.ToTable("SITUACAO");
 
-                entity.HasIndex(e => e.NomeSituação, "UQ__SITUACAO__557603FFC4D12B7D")
+                entity.HasIndex(e => e.NomeSituacao, "UQ__SITUACAO__557603FFC4D12B7D")
                     .IsUnique();
 
                 entity.Property(e => e.IdSituacao)
                     .ValueGeneratedOnAdd()
                     .HasColumnName("idSituacao");
 
-                entity.Property(e => e.NomeSituação)
+                entity.Property(e => e.NomeSituacao)
                     .IsRequired()
                     .HasMaxLength(70)
                     .IsUnicode(false)

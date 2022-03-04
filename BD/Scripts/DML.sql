@@ -5,7 +5,7 @@ INSERT INTO TIPOUSUARIO(nomeTipoUsuario)
 VALUES ('Empresa'),('Cliente');
 GO
 
-INSERT INTO SITUACAO(nomeSituação)
+INSERT INTO SITUACAO(nomeSituacao)
 VALUES ('Aceita'),('Negada'),('Pendente');
 GO
 
