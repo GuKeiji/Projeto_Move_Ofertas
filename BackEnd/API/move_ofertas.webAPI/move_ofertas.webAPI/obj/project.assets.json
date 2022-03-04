@@ -7752,11 +7752,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\samue\\.nuget\\packages\\": {}
+>>>>>>> origin
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\52826143832.INFOSCS\\Desktop\\Projeto_MOVENOVO\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
       "projectName": "move_ofertas.webAPI",
       "projectPath": "C:\\Users\\52826143832.INFOSCS\\Desktop\\Projeto_MOVENOVO\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
@@ -7765,6 +7770,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\52826143832.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\samue\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
+      "projectName": "move_ofertas.webAPI",
+      "projectPath": "C:\\Users\\samue\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
+      "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\samue\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\samue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> origin
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
