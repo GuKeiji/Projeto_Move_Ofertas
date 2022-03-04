@@ -71,3 +71,13 @@ C:\Users\fabio\source\repos\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\ne
 C:\Users\fabio\source\repos\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\ref\move_ofertas.webAPI.dll
 C:\Users\fabio\source\repos\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.pdb
 C:\Users\fabio\source\repos\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.genruntimeconfig.cache
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.csproj.AssemblyReference.cache
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.AssemblyInfoInputs.cache
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.AssemblyInfo.cs
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.csproj.CoreCompileInputs.cache
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.dll
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\ref\move_ofertas.webAPI.dll
+C:\Users\52826143832.INFOSCS\Desktop\Projeto_MOVENOVO\Projeto_Move_Ofertas\BackEnd\API\move_ofertas.webAPI\move_ofertas.webAPI\obj\Debug\net5.0\move_ofertas.webAPI.pdb
