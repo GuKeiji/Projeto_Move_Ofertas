@@ -155,6 +155,7 @@ namespace move_ofertas.webAPI.Repositories
             return ctx.Oferta
                                 .Select(p => new Ofertum()
                                 {
+                                    IdOferta = p.IdOferta,
                                     NomeProduto = p.NomeProduto,
                                     Valor = p.Valor,
                                     Quantidade = p.Quantidade,

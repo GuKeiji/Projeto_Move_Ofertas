@@ -32,7 +32,7 @@ namespace move_ofertas.webAPI.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=NOTE0113E1\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=Senai@132;");
+                optionsBuilder.UseSqlServer("Data Source=PC-GAMER-GUKEIJ\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=senai@132;");
             }
         }
 
@@ -339,7 +339,7 @@ namespace move_ofertas.webAPI.Contexts
                     .IsRequired()
                     .HasMaxLength(70)
                     .IsUnicode(false)
-                    .HasColumnName("nomeSituação");
+                    .HasColumnName("nomeSituacao");
             });
 
             modelBuilder.Entity<Tipousuario>(entity =>
