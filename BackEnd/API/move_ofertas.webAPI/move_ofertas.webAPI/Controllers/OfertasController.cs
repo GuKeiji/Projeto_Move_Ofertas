@@ -33,7 +33,7 @@ namespace move_ofertas.webAPI.Controllers
                 {
                     return StatusCode(404, new
                     {
-                        Mensagem = "Não existem consultas agendadas"
+                        Mensagem = "Não existem ofertas cadastradas"
                     });
                 }
                 return Ok(listaOferta);
@@ -110,19 +110,26 @@ namespace move_ofertas.webAPI.Controllers
 
         }
 
-        [HttpPatch("AlterarDescricao/{id}")]
-        public IActionResult AlterarDescricao(Ofertum ofertaAtualizada, int id)
+        [HttpPatch("Alterar/{id}")]
+        public IActionResult Alterar(Ofertum ofertaAtualizada, int id)
         {
             try
             {
-                if (ofertaAtualizada.Descricao == null)
-                {
-                    return BadRequest(new
-                    {
-                        Mensagem = "Informe a descrição"
-                    });
-                }
+                _ofertaRepository.Alterar(ofertaAtualizada, id);
 
+                return StatusCode(204);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [HttpDelete("Deletar/{id}")]
+        public IActionResult RemoverOferta(int id)
+        {
+            try
+            {
                 if (id <= 0)
                 {
                     return BadRequest(new
@@ -135,20 +142,21 @@ namespace move_ofertas.webAPI.Controllers
                 {
                     return NotFound(new
                     {
-                        Mensagem = "Não existem ofertas com esse ID"
+                        Mensagem = "Não existe oferta com esse ID"
                     });
                 }
-                _ofertaRepository.AlterarDescricao(ofertaAtualizada.Descricao, id);
+
+                _ofertaRepository.RemoverOferta(id);
+
                 return StatusCode(200, new
                 {
-                    Mensagem = "Descrição da oferta alterada",
-                    ofertaAtualizada
+                    Mensagem = "Oferta removida"
                 });
             }
-            catch (Exception error)
+            catch (Exception erro)
             {
 
-                return BadRequest(error.Message);
+                return BadRequest(erro);
             }
         }
     }

@@ -7752,19 +7752,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\": {}
+    "C:\\Users\\fabio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\52826143832.INFOSCS\\Desktop\\Projeto_MOVENOVO\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
+      "projectUniqueName": "E:\\HD\\senai_2t\\Projeto_Move\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
       "projectName": "move_ofertas.webAPI",
-      "projectPath": "C:\\Users\\52826143832.INFOSCS\\Desktop\\Projeto_MOVENOVO\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
-      "packagesPath": "C:\\Users\\52826143832.INFOSCS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\52826143832.INFOSCS\\Desktop\\Projeto_MOVENOVO\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\obj\\",
+      "projectPath": "E:\\HD\\senai_2t\\Projeto_Move\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
+      "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
+      "outputPath": "E:\\HD\\senai_2t\\Projeto_Move\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\52826143832.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7835,12 +7835,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.12, 5.0.12]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7849,16 +7843,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\52826143832.INFOSCS\\Desktop\\Projeto_MOVENOVO\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

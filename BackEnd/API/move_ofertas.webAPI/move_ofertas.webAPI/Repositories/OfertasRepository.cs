@@ -13,15 +13,53 @@ namespace move_ofertas.webAPI.Repositories
     public class OfertasRepository : IOfertaRepository
     {
         MoveOfertasContext ctx = new MoveOfertasContext();
-        public void AlterarDescricao(string descricao, int id)
+        public void Alterar(Ofertum ofertaAtualizada, int id)
         {
+            
             Ofertum ofertaBuscada = BuscarPorId(id);
-            if (descricao != null)
+
+            if (ofertaAtualizada.NomeProduto != null)
             {
-                ofertaBuscada.Descricao = descricao;
-                ctx.Oferta.Update(ofertaBuscada);
-                ctx.SaveChanges();
+                ofertaBuscada.NomeProduto = ofertaAtualizada.NomeProduto;
             }
+
+            if (ofertaAtualizada.IdCategoria != null)
+            {
+                ofertaBuscada.IdCategoria = ofertaAtualizada.IdCategoria;
+            }
+
+            if (ofertaAtualizada.Valor != 0)
+            {
+                ofertaBuscada.Valor = ofertaAtualizada.Valor;
+            }
+
+            if (ofertaAtualizada.Quantidade != null)
+            {
+                ofertaBuscada.Quantidade = ofertaAtualizada.Quantidade;
+            }
+
+            if (ofertaAtualizada.IdSituacao != null)
+            {
+                ofertaBuscada.IdSituacao = ofertaAtualizada.IdSituacao;
+            }
+
+            if (ofertaAtualizada.Descricao != null)
+            {
+                ofertaBuscada.Descricao = ofertaAtualizada.Descricao;
+            }
+
+            if (ofertaAtualizada.DataFabricacao < DateTime.Now)
+            {
+                ofertaBuscada.DataFabricacao = ofertaAtualizada.DataFabricacao;
+            }
+
+            if (ofertaAtualizada.DataValidade > DateTime.Now)
+            {
+                ofertaBuscada.DataValidade = ofertaAtualizada.DataValidade;
+            }
+
+            ctx.Oferta.Update(ofertaBuscada);
+            ctx.SaveChanges();
         }
 
         public Ofertum BuscarPorId(int id)
