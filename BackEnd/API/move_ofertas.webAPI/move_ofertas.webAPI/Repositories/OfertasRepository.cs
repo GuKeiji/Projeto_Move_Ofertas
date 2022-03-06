@@ -238,12 +238,9 @@ namespace move_ofertas.webAPI.Repositories
                 int anoAtual = DateTime.Now.Year;
                 int mesAtual = DateTime.Now.Month;
                 int diaAtual = DateTime.Now.Day;
-
-                dataFab = new DateTime(); // Ano, mês, dia
-                String.Format("{0:MM/dd/yy}", dataFab);
-
-                dataVal = new DateTime(); // Ano, mês, dia
-                String.Format("{0:MM/dd/yy}", dataVal);
+                
+                //String.Format("{0:MM/dd/yy}", dataFab);   
+                //String.Format("{0:MM/dd/yy}", dataVal);
 
                 var dataFabAno = dataFab.Year;
                 var dataFabMes = dataFab.Month;
