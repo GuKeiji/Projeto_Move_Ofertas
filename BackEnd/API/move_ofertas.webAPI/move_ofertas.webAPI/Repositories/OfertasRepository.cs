@@ -202,7 +202,7 @@ namespace move_ofertas.webAPI.Repositories
                 imagemOferta.IdOferta = id;
             }
 
-            //ANALISAR SE O USUARIO JA POSSUI FOTO DE PERFIL
+            //ANALISAR SE O USUARIO JA POSSUI FOTO DA OFERTA
             Imagemofertum fotoexistente = new Imagemofertum();
             fotoexistente = ctx.Imagemoferta.FirstOrDefault(i => i.IdOferta == id);
 
@@ -213,7 +213,7 @@ namespace move_ofertas.webAPI.Repositories
                 fotoexistente.MimeType = imagemOferta.MimeType;
                 fotoexistente.IdOferta = id;
 
-                //atualiza a imagem de perfil do usuario.
+                //atualiza a imagem da oferta.
                 ctx.Imagemoferta.Update(fotoexistente);
             }
             else
@@ -223,5 +223,334 @@ namespace move_ofertas.webAPI.Repositories
 
             ctx.SaveChanges();
         }
+
+        public string VerificarValidade(int id)
+        {
+            Ofertum ofertaValidade = BuscarPorId(id);
+
+            // Lógica
+            if (ofertaValidade.DataValidade != null)
+            {
+                DateTime dataFab = ofertaValidade.DataFabricacao;
+
+                DateTime dataVal = ofertaValidade.DataValidade.Value.Date;
+
+                int anoAtual = DateTime.Now.Year;
+                int mesAtual = DateTime.Now.Month;
+                int diaAtual = DateTime.Now.Day;
+
+                dataFab = new DateTime(); // Ano, mês, dia
+                String.Format("{0:MM/dd/yy}", dataFab);
+
+                dataVal = new DateTime(); // Ano, mês, dia
+                String.Format("{0:MM/dd/yy}", dataVal);
+
+                var dataFabAno = dataFab.Year;
+                var dataFabMes = dataFab.Month;
+                var dataFabDia = dataFab.Day;
+
+                var dataValAno = dataVal.Year;
+                var dataValMes = dataVal.Month;
+                var dataValDia = dataVal.Day;
+
+                // Calcular o quanto já passou
+
+                if (dataValAno < anoAtual)
+                {
+                    var anoTotal = anoAtual - dataValAno;
+                    Console.WriteLine(anoTotal);
+
+                    if (dataValMes < mesAtual)
+                    {
+                        var mesTotal = dataValMes - mesAtual;
+                        Console.WriteLine(mesTotal);
+
+                        if (dataValDia < diaAtual)
+                        {
+                            var diaTotal = dataValDia - diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia == diaAtual)
+                        {
+                            var diaTotal = diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia > diaAtual)
+                        {
+                            var diaTotal = diaAtual + dataValDia;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+                    }
+
+                    if (dataValMes == mesAtual)
+                    {
+                        var mesTotal = dataValMes - mesAtual;
+                        Console.WriteLine(mesTotal);
+
+                        if (dataValDia < diaAtual)
+                        {
+                            var diaTotal = dataValDia - diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia == diaAtual)
+                        {
+                            var diaTotal = diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia > diaAtual)
+                        {
+                            var diaTotal = diaAtual + dataValDia;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+                    }
+
+                    if (dataValMes > mesAtual)
+                    {
+                        var mesTotal = dataValMes - mesAtual;
+                        Console.WriteLine(mesTotal);
+
+                        if (dataValDia < diaAtual)
+                        {
+                            var diaTotal = dataValDia - diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia == diaAtual)
+                        {
+                            var diaTotal = diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia > diaAtual)
+                        {
+                            var diaTotal = diaAtual + dataValDia;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+                    }
+                }
+
+                if (dataValAno == anoAtual)
+                {
+                    var anoTotal = anoAtual - dataValAno;
+                    Console.WriteLine(anoTotal);
+
+                    if (dataValMes < mesAtual)
+                    {
+                        var mesTotal = dataValMes - mesAtual;
+                        Console.WriteLine(mesTotal);
+
+                        if (dataValDia < diaAtual)
+                        {
+                            var diaTotal = dataValDia - diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia == diaAtual)
+                        {
+                            var diaTotal = diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia > diaAtual)
+                        {
+                            var diaTotal = diaAtual - dataValDia;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+                    }
+
+                    if (dataValMes == mesAtual)
+                    {
+                        var mesTotal = dataValMes - mesAtual;
+                        Console.WriteLine(mesTotal);
+
+                        if (dataValDia < diaAtual)
+                        {
+                            var diaTotal = dataValDia - diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"Está fora da validade há {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia == diaAtual)
+                        {
+                            var diaTotal = diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"É válido até hoje");
+                        }
+
+                        if (dataValDia > diaAtual)
+                        {
+                            var diaTotal = diaAtual - dataValDia;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+                    }
+
+                    if (dataValMes > mesAtual)
+                    {
+                        var mesTotal = dataValMes - mesAtual;
+                        Console.WriteLine(mesTotal);
+
+                        if (dataValDia < diaAtual)
+                        {
+                            var diaTotal = dataValDia - diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia == diaAtual)
+                        {
+                            var diaTotal = diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia > diaAtual)
+                        {
+                            var diaTotal = diaAtual - dataValDia;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+                    }
+                }
+
+                if (dataValAno > anoAtual)
+                {
+                    var anoTotal = anoAtual - dataValAno;
+                    Console.WriteLine(System.Math.Abs(anoTotal));
+
+                    if (dataValMes < mesAtual)
+                    {
+                        var mesTotal = dataValMes - mesAtual;
+                        Console.WriteLine(mesTotal);
+
+                        if (dataValDia < diaAtual)
+                        {
+                            var diaTotal = dataValDia - diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia == diaAtual)
+                        {
+                            var diaTotal = diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia > diaAtual)
+                        {
+                            var diaTotal = diaAtual - dataValDia;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+                    }
+
+                    if (dataValMes == mesAtual)
+                    {
+                        var mesTotal = dataValMes - mesAtual;
+                        Console.WriteLine(mesTotal);
+
+                        if (dataValDia < diaAtual)
+                        {
+                            var diaTotal = dataValDia - diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia == diaAtual)
+                        {
+                            var diaTotal = diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia > diaAtual)
+                        {
+                            var diaTotal = diaAtual - dataValDia;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+                    }
+
+                    if (dataValMes > mesAtual)
+                    {
+                        var mesTotal = dataValMes - mesAtual;
+                        Console.WriteLine(mesTotal);
+
+                        if (dataValDia < diaAtual)
+                        {
+                            var diaTotal = dataValDia - diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia == diaAtual)
+                        {
+                            var diaTotal = diaAtual;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        if (dataValDia > diaAtual)
+                        {
+                            var diaTotal = diaAtual - dataValDia;
+                            Console.WriteLine(diaTotal);
+
+                            return ($"O tempo restante da validade é {System.Math.Abs(anoTotal)} ano(s), {System.Math.Abs(mesTotal)} mes(es) e {System.Math.Abs(diaTotal)} dia(s)");
+                        }
+
+                        return null;
+                    }
+                    return null;
+                }
+                return null;
+            }
+            else
+            {
+                return ($"Essa oferta não tem validade!");
+            }
+        }         
     }
 }

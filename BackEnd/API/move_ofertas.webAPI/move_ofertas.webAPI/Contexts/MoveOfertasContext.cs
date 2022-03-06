@@ -32,7 +32,8 @@ namespace move_ofertas.webAPI.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=PC-GAMER-GUKEIJ\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=senai@132;");
+                //optionsBuilder.UseSqlServer("Data Source=PC-GAMER-GUKEIJ\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=senai@132;");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-20INV7D\\SQLEXPRESS; initial catalog=Move_Ofertas; user Id=sa; pwd=SenaiSamuel1;");
             }
         }
 

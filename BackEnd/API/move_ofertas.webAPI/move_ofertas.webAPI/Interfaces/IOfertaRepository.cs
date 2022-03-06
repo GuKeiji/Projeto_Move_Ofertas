@@ -17,7 +17,7 @@ namespace move_ofertas.webAPI.Interfaces
             Ofertum BuscarPorId(int id);
             List<Ofertum> ListarMinhasOfertas(int id, int idTipoUsuario);
             List<Ofertum> ListarTodas();
-            
+            string VerificarValidade(int id);
     }
 
 }

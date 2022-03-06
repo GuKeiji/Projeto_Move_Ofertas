@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\HD\\senai_2t\\Projeto_Move\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj": {}
+    "C:\\Users\\samue\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj": {}
   },
   "projects": {
-    "E:\\HD\\senai_2t\\Projeto_Move\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj": {
+    "C:\\Users\\samue\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\HD\\senai_2t\\Projeto_Move\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
+        "projectUniqueName": "C:\\Users\\samue\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
         "projectName": "move_ofertas.webAPI",
-        "projectPath": "E:\\HD\\senai_2t\\Projeto_Move\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
-        "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
-        "outputPath": "E:\\HD\\senai_2t\\Projeto_Move\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\obj\\",
+        "projectPath": "C:\\Users\\samue\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\move_ofertas.webAPI.csproj",
+        "packagesPath": "C:\\Users\\samue\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samue\\Desktop\\Projeto_Move_Ofertas\\BackEnd\\API\\move_ofertas.webAPI\\move_ofertas.webAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\samue\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

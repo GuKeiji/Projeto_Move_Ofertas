@@ -210,5 +210,26 @@ namespace move_ofertas.webAPI.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("verify/validade")]
+        public IActionResult VerificarVal(int id)
+        {
+            try
+            {              
+               if (id == 0)
+                {
+                    return BadRequest(new
+                    {
+                        Mensagem = "Id inválido"
+                    });
+                }             
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+
+            return Ok(_ofertaRepository.VerificarValidade(id));
+        }
     }
 }

@@ -34,8 +34,8 @@ GO
 
 INSERT INTO OFERTA(idCategoria,idEmpresa,idSituacao,nomeProduto,valor,quantidade,dataFabricacao,dataValidade,descricao)
 VALUES ('8','1','1','Ração','20.00','10','01/01/2022','28/02/2022','Ração de qualidade'),
-	   ('4','2','1','Camiseta','50.00','20','02/01/2022','','Tamanho P'),
-	   ('4','2','1','Tênis','100.00','15','01/01/2022','','Número 41');
+	   ('4','2','1','Camiseta','50.00','20','02/01/2022',null,'Tamanho P'),
+	   ('4','2','1','Tênis','100.00','15','01/01/2022',null,'Número 41');
 GO
 
 INSERT INTO RESERVA(idCliente,idSituacao,idOferta,dataReserva)
