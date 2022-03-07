@@ -18,7 +18,7 @@ namespace move_ofertas.webAPI.Domains
         public byte? IdSituacao { get; set; }
         public string NomeProduto { get; set; }
         public decimal Valor { get; set; }
-        public string Quantidade { get; set; }
+        public int Quantidade { get; set; }
         public DateTime DataFabricacao { get; set; }
         public DateTime? DataValidade { get; set; }
         public string Descricao { get; set; }

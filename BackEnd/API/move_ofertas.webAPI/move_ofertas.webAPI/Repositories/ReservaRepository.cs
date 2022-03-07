@@ -12,11 +12,17 @@ namespace move_ofertas.webAPI.Repositories
     {
         MoveOfertasContext ctx = new MoveOfertasContext();
 
-        public void Cadastrar(Reserva novaReserva)
-        {
-            ctx.Reservas.Add(novaReserva);
+        public void Cadastrar(Reserva novaReserva, int id, int retirar)
+        {          
+            Ofertum ofertaBuscada = BuscarPorId(id);
 
-            ctx.SaveChanges();
+            if (ofertaBuscada.Quantidade != 0)
+            {
+                ofertaBuscada.Quantidade = ofertaBuscada.Quantidade - retirar;
+                ctx.Oferta.Update(ofertaBuscada);
+                ctx.Reservas.Add(novaReserva);
+                ctx.SaveChanges();
+            }          
         }
 
         public List<Reserva> ListarMinhasReservas(int id, int idTipoUsuario)
@@ -58,6 +64,11 @@ namespace move_ofertas.webAPI.Repositories
         public List<Reserva> ListarTodos()
         {
             return ctx.Reservas.ToList();  
+        }
+
+        public Ofertum BuscarPorId(int id)
+        {
+            return ctx.Oferta.FirstOrDefault(c => c.IdOferta == id);
         }
     }
 }

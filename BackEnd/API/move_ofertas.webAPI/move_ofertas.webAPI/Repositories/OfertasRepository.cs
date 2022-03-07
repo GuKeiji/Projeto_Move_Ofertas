@@ -33,7 +33,7 @@ namespace move_ofertas.webAPI.Repositories
                 ofertaBuscada.Valor = ofertaAtualizada.Valor;
             }
 
-            if (ofertaAtualizada.Quantidade != null)
+            if (ofertaAtualizada.Quantidade != 0)
             {
                 ofertaBuscada.Quantidade = ofertaAtualizada.Quantidade;
             }

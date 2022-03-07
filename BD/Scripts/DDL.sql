@@ -78,7 +78,7 @@ CREATE TABLE OFERTA (
 	idSituacao TINYINT FOREIGN KEY REFERENCES SITUACAO(idSituacao),
 	nomeProduto VARCHAR(160) NOT NULL,
 	valor MONEY NOT NULL,
-	quantidade VARCHAR(50) NOT NULL,
+	quantidade INT NOT NULL,
 	dataFabricacao DATE NOT NULL,
 	dataValidade DATE,
 	descricao VARCHAR(260) NOT NULL

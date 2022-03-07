@@ -25,11 +25,11 @@ namespace move_ofertas.webAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(Reserva novaReserva)
+        public IActionResult Cadastrar(Reserva novaReserva, int id, int retirar)
         {
             try
             {
-                _reservaRepository.Cadastrar(novaReserva);
+                _reservaRepository.Cadastrar(novaReserva, id, retirar);
 
                 return StatusCode(201);
             }

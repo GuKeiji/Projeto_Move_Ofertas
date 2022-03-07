@@ -11,6 +11,6 @@ namespace move_ofertas.webAPI.Interfaces
         List<Reserva> ListarTodos();
         List<Reserva> ListarMinhasReservas(int id, int idTipoUsuario);
 
-        void Cadastrar(Reserva novaReserva);
+        void Cadastrar(Reserva novaReserva, int id, int retirar);
     }
 }
