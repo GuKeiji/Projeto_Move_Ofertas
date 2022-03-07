@@ -15,7 +15,6 @@ namespace move_ofertas.webAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    [Authorize]
     public class EmpresaController : ControllerBase
     {
         private IEmpresaRepository _empresaRepository { get; set; }
